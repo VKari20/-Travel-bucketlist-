@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>ness Travel Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="next.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+
+            <img src="snow.jpg" style="width:1500px; height:500px;background-size: cover;">
+            <div class="text">
+                <h1>NESS TRAVEL AGENCY</h1>
+                <h2>WHERE YOU GET TO SEE MORE OF THE WORLD</h2>
+                <button class="button-01" role="button"><a href="next.html">EXPLORE</a></button></div>
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="city.jpg" style="width:1500px; height:500px;background-size: cover; ">
+            <div class="text 1">
+                <h1>NESS TRAVEL AGENCY</h1>
+                <h2>WHERE YOU GET TO SEE MORE OF THE WORLD</h2>
+                <button class="button-01" role="button"><a href="next.html">EXPLORE</a></button>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="sea-coast-water-rock-night-town-712501-pxhere.com.jpg" style="width:1500px; height:500px;background-size: cover;">
+            <div class="text 2">
+                <h1>NESS TRAVEL AGENCY</h1>
+                <h2>WHERE YOU GET TO SEE MORE OF THE WORLD</h2>
+                <button class="button-01" role="button"><a href="next.html">EXPLORE</a></button>
+            </div>
+        </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+    </div>
+
+
+
+
+</body>
+
+</html>
